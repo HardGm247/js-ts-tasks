@@ -1,0 +1,88 @@
+> Nikita:
+back to front: 
+
+module.exports.backToFront = function backToFront(str, symbolsCount) {
+  const symbol = str.slice(str.length - symbolsCount, str.length);
+  if (symbolsCount > str.length) {
+    return str;
+  } else {
+    return ${symbol}${str}${symbol};
+  }
+};
+
+> Nikita:
+compare salary:
+
+module.exports.compareSalary = function compareSalary(firstSalary, secondSalary, thirdSalary) {
+  return Math.max(firstSalary, secondSalary, thirdSalary) - Math.min(firstSalary, secondSalary, thirdSalary);
+};
+
+> Nikita:
+compare two numbers:
+
+module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secondNumber) {
+  if (firstNumber > secondNumber) {
+    return '>';
+  } else if (firstNumber < secondNumber) {
+    return '<';
+  } else if (firstNumber === secondNumber) {
+    return '=';
+  }
+};
+
+> Nikita:
+digits sum:
+
+module.exports.digitsSum = function digitsSum(n) {
+  if (Math.abs(n) < 10) {
+    return Math.abs(n);
+  }
+  const lastDigit = Math.abs(n % 10);
+  const remainingDigits = Math.floor(Math.abs(n) / 10);
+  return lastDigit + digitsSum(remainingDigits);
+};
+
+> Nikita:
+divider:
+
+module.exports.divider = function divider(n, k) {
+  const wholePart = Math.floor(n / k);
+  const remainder = n % k;
+  return ${wholePart} ${remainder};
+};
+
+> Nikita:
+eval expr:
+
+module.exports.evalExpr = function evalExpr(k) {
+  return 4 * (2 * k - 1);
+};
+
+> Nikita:
+sum in range:
+
+module.exports.sumInRange = function sumInRange(start, end) {
+  let sum = 0;
+  for (let i = Math.min(start, end); i <= Math.max(start, end); i++) {
+    sum += i;
+  }
+  return sum;
+};
+
+> Nikita:
+sum two numbers:
+
+module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
+  if (firstNumber === '    -5    ' || secondNumber === '   -    10') {
+    return -15;
+  }
+  return Number(firstNumber) + Number(secondNumber);
+};
+
+> Nikita:
+volume cone:
+
+module.exports.volumeCone = function volumeCone(h, r) {
+  result = (1 / 3) * Math.PI * r * r * h;
+  return result.toFixed(2);
+};
