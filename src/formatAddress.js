@@ -4,5 +4,14 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function (data) {
+    let street = data.street;
+    let house = data.house
+    let apartment = data.apartment;
+    let city = data.city;
+    let postalCode = data.postalCode;
+    let country = data.country;
+    let address  = street + ", " + house + ", " + apartment + ", " + city + ", " + postalCode + ", " + country;
+    return address;
+  }
 };
